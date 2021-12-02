@@ -7,12 +7,21 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@mantine/core": "^3.2.3",
+    "@mantine/dates": "^3.2.3",
+    "@mantine/dropzone": "^3.2.3",
+    "@mantine/hooks": "^3.2.3",
+    "@mantine/modals": "^3.2.3",
+    "@mantine/notifications": "^3.2.3",
+    "@mantine/rte": "^3.2.3",
     "axios": "^0.24.0",
     "daisyui": "^1.16.2",
+    "dayjs": "^1.10.7",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
     "react-helmet-async": "^1.1.2",
     "react-hook-form": "^7.20.5",
+    "react-icons": "^4.3.1",
     "react-query": "^3.34.0",
     "react-router-dom": "^6.0.2"
   },
