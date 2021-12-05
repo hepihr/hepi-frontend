@@ -4,9 +4,9 @@ import PageHelmet from "../../layouts/PageHelmet";
 const LandingPage: React.FC = (): JSX.Element => {
   return (
     <>
-      <PageHelmet title="Hepi HR" />
+      <PageHelmet title="TimeOff" />
       <>
-        <h1>Hepi HR</h1>
+        <h1>TimeOff</h1>
       </>
     </>
   );
