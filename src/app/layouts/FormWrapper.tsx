@@ -1,3 +1,4 @@
+import { Center } from "@mantine/core";
 import React from "react";
 
 interface IFormWrapper {
@@ -6,7 +7,11 @@ interface IFormWrapper {
 }
 
 const FormWrapper: React.FC<IFormWrapper> = () => {
-  return <div></div>;
+  return (
+    <Center className="w-full">
+      <h1>Halo</h1>
+    </Center>
+  );
 };
 
 export default FormWrapper;
