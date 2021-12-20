@@ -33,10 +33,18 @@ const ApplicationsNavbar: React.FC = () => {
         Documents
       </Button>
       <Button
+        leftIcon={<FaDochub />}
+        className="btn btn-ghost"
+        component={Link}
+        to={"/dashboard/timeoff"}
+      >
+        Time-Off
+      </Button>
+      <Button
         leftIcon={<FaCogs />}
         className="btn btn-ghost"
         component={Link}
-        to={"/settings"}
+        to={"/dashboard/settings"}
       >
         Settings
       </Button>

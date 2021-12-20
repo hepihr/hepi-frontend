@@ -2,22 +2,25 @@ import React from "react";
 import { Route, Routes } from "react-router-dom";
 import ApplicationsDashboard from "../layouts/applications-dashboard/ApplicationsDashboard";
 import Dashboard from "./dashboard/Dashboard";
-import Employees from "./dashboard/employees/Employees";
+import Document from "./dashboard/documents/Document";
+import Employee from "./dashboard/employees/Employee";
 import TimeOff from "./dashboard/timeoff/TimeOff";
 import PageNotFound from "./PageNotFound";
-import LandingPage from "./root/LandingPage";
+import Setting from "./settings/Setting";
 
 const Router: React.FC = (): JSX.Element => {
   return (
     <Routes>
-      <Route index element={<LandingPage />} />
       <Route
-        path="dashboard"
+        path="/"
         element={<ApplicationsDashboard applicationsHeader={""} />}
       >
         <Route index element={<Dashboard />} />
-        <Route path="employees" element={<Employees />} />
-        <Route path="timeoff" element={<TimeOff />} />
+        <Route path="/dashboard/documents" element={<Document />} />
+        <Route path="/dashboard/employees" element={<Employee />} />
+        <Route path="/dashboard/timeoff" element={<TimeOff />} />
+        <Route path="/dashboard/settings" element={<Setting />} />
+        <Route path="*" element={<PageNotFound />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
