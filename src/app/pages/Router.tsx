@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import ApplicationsDashboard from "../layouts/applications-dashboard/ApplicationsDashboard";
 import Dashboard from "./dashboard/Dashboard";
 import Employees from "./dashboard/employees/Employees";
 import TimeOff from "./dashboard/timeoff/TimeOff";
@@ -10,7 +11,10 @@ const Router: React.FC = (): JSX.Element => {
   return (
     <Routes>
       <Route index element={<LandingPage />} />
-      <Route path="dashboard">
+      <Route
+        path="dashboard"
+        element={<ApplicationsDashboard applicationsHeader={""} />}
+      >
         <Route index element={<Dashboard />} />
         <Route path="employees" element={<Employees />} />
         <Route path="timeoff" element={<TimeOff />} />

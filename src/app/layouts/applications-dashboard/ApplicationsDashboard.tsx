@@ -9,6 +9,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 import ApplicationsNavbar from "./ApplicationsNavbar";
 
 interface IApplicationsDashboard {
@@ -56,7 +57,7 @@ const ApplicationsDashboard: React.FC<IApplicationsDashboard> = ({
       }
     >
       <Container>
-        <>{children}</>
+        <Outlet />
       </Container>
     </AppShell>
   );
