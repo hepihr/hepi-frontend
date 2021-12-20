@@ -45,7 +45,7 @@ const ApplicationsNavbar: React.FC = () => {
         leftIcon={<FaDochub />}
         className="btn btn-ghost"
         component={Link}
-        to={"/dashboard/calendar"}
+        to={"/dashboard/timeoff/calendar"}
       >
         Time-Off Calendar
       </Button>
@@ -54,7 +54,7 @@ const ApplicationsNavbar: React.FC = () => {
         leftIcon={<FaDochub />}
         className="btn btn-ghost"
         component={Link}
-        to={"/dashboard/history"}
+        to={"/dashboard/timeoff/history"}
       >
         Time-Off History
       </Button>
@@ -63,7 +63,7 @@ const ApplicationsNavbar: React.FC = () => {
         leftIcon={<FaDochub />}
         className="btn btn-ghost"
         component={Link}
-        to={"/dashboard/request"}
+        to={"/dashboard/timeoff/request"}
       >
         Time-Off Request
       </Button>
