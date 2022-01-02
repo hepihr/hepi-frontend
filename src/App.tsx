@@ -1,10 +1,31 @@
 import React from "react";
+import { HelmetProvider } from "react-helmet-async";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import ApplicationsRouter from "./app/Router";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    mutations: {
+      retry: false,
+    },
+    queries: {
+      retry: false,
+    },
+  },
+});
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <div>
-      <h1>TEST</h1>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <HelmetProvider>
+        <BrowserRouter>
+          <ApplicationsRouter />
+        </BrowserRouter>
+      </HelmetProvider>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
   );
 };
 
