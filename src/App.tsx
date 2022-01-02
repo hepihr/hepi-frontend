@@ -1,9 +1,9 @@
 import React from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
-import ApplicationsRouter from "./app/Router";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
+import ApplicationsRouter from "./app/Router";
 
 const queryClient = new QueryClient({
   defaultOptions: {
