@@ -1,31 +1,13 @@
 import React from "react";
-import { HelmetProvider } from "react-helmet-async";
-import { QueryClient, QueryClientProvider } from "react-query";
-import { ReactQueryDevtools } from "react-query/devtools";
-import { BrowserRouter } from "react-router-dom";
-import ApplicationsRouter from "./app/Router";
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    mutations: {
-      retry: false,
-    },
-    queries: {
-      retry: false,
-    },
-  },
-});
+import { Route, Routes } from "react-router-dom";
+import "./app.css";
+import LandingPage from "./apps/pages/LandingPage";
 
 const App: React.FC = (): JSX.Element => {
   return (
-    <QueryClientProvider client={queryClient}>
-      <HelmetProvider>
-        <BrowserRouter>
-          <ApplicationsRouter />
-        </BrowserRouter>
-      </HelmetProvider>
-      <ReactQueryDevtools />
-    </QueryClientProvider>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+    </Routes>
   );
 };
 
