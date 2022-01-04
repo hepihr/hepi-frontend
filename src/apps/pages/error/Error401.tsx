@@ -1,10 +1,18 @@
 import React from "react";
+import PageError from "../../layouts/PageError";
 
-const Error401 = () => {
+interface IError401 {
+  errorMessage: string;
+}
+
+const Error401: React.FC<IError401> = ({ errorMessage }) => {
   return (
-    <div>
-      <h1>Error401</h1>
-    </div>
+    <PageError
+      errorCode={401}
+      errorMessage={errorMessage}
+      pageDescription="401 Unauthorized"
+      pageTitle="401 Unauthorized"
+    />
   );
 };
 
