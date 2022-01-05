@@ -11,7 +11,6 @@ interface IPageError {
 const PageError: React.FC<IPageError> = ({
   errorCode,
   errorMessage,
-  pageDescription,
   pageTitle,
 }) => {
   return (
