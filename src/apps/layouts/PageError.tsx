@@ -16,10 +16,7 @@ const PageError: React.FC<IPageError> = ({
 }) => {
   return (
     <>
-      <PageHelmet
-        pageDescription={pageDescription || ""}
-        pageTitle={pageTitle || ""}
-      />
+      <PageHelmet pageTitle={pageTitle || ""} />
       <div>
         <h1>{errorCode}</h1>
         <h2>{errorMessage}</h2>

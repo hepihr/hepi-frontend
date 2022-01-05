@@ -5,7 +5,7 @@ import LoginForm from "./LoginForm";
 const Login = () => {
   return (
     <>
-      <PageHelmet pageDescription="Login" pageTitle="Login" />
+      <PageHelmet pageTitle="Login" />
       <LoginForm />
     </>
   );
