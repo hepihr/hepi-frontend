@@ -8,6 +8,20 @@ const Router: React.FC = (): JSX.Element => {
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="login" element={<Login />} />
+
+      <Route path="dashboard" />
+
+      <Route path="dashboard/employees" />
+      <Route path="dashboard/employees/{id}" />
+
+      <Route path="dashboard/timeoff/calendar" />
+      <Route path="dashboard/timeoff/calendar/{id}" />
+
+      <Route path="dashboard/timeoff/history" />
+      <Route path="dashboard/timeoff/history/{id}" />
+
+      <Route path="dashboard/timeoff/request" />
+      <Route path="dashboard/timeoff/request/{id}" />
     </Routes>
   );
 };

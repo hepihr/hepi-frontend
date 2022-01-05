@@ -1,5 +1,5 @@
 import React from "react";
-import PageHelmet from "../../../layouts/PageHelmet";
+import PageHelmet from "../../../../layouts/PageHelmet";
 import TimeoffRequestRenderer from "./components/TimeoffRequestRenderer";
 
 const TimeoffRequest: React.FC = (): JSX.Element => {
