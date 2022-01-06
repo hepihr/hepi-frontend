@@ -13,11 +13,8 @@ const EmployeeDetail: React.FC = (): JSX.Element => {
   const { data, error, isError, isLoading } = useQuery(
     timeoffEmployeesAPI + id,
     async () => {
-      try {
-        return (await api.get(timeoffEmployeesAPI + id)).data;
-      } catch (error) {
-        return error;
-      }
+      const { data } = await api.get(timeoffEmployeesAPI + id);
+      return data;
     }
   );
 

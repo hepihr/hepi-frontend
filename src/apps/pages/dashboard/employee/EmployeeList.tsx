@@ -1,4 +1,3 @@
-import { AxiosError, AxiosResponse } from "axios";
 import React from "react";
 import { useQuery } from "react-query";
 import PageHelmet from "../../../layouts/PageHelmet";
@@ -10,15 +9,9 @@ import EmployeeListRenderer from "./components/EmployeeListRenderer";
 const EmployeeList: React.FC = (): JSX.Element => {
   const { data, error, isError, isLoading } = useQuery(
     timeoffEmployeesAPI,
-    () => {
-      api
-        .get(timeoffEmployeesAPI)
-        .then((response: AxiosResponse) => {
-          return response.data;
-        })
-        .catch((error: AxiosError) => {
-          return error.response;
-        });
+    async () => {
+      const { data } = await api.get(timeoffEmployeesAPI);
+      return data;
     }
   );
 
