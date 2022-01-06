@@ -1,8 +1,3 @@
-export const timeoffEmployee = "timeoff/employees/{employeeId}";
-export const timeoffEmployees = "timeoff/employees";
-
-export const timeoffHitorys = "timeoff/hitorys";
-export const timeoffHitory = "timeoff/hitorys/{hitoryId}";
-
-export const timeoffRequests = "timeoff/requests";
-export const timeoffRequest = "timeoff/requests/{requestId}";
+export const timeoffEmployeesAPI = "timeoff/employees";
+export const timeoffHitorysAPI = "timeoff/hitorys";
+export const timeoffRequestsAPI = "timeoff/requests";
