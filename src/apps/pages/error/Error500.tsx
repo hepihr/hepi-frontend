@@ -6,14 +6,7 @@ interface IError500 {
 }
 
 const Error500: React.FC<IError500> = ({ errorMessage }) => {
-  return (
-    <PageError
-      errorCode={500}
-      errorMessage={errorMessage}
-      pageDescription="500 Internal Server Error"
-      pageTitle="500 Internal Server Error"
-    />
-  );
+  return <PageError errorCode={500} errorMessage={errorMessage} />;
 };
 
 export default Error500;

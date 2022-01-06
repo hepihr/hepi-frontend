@@ -6,14 +6,7 @@ interface IError404 {
 }
 
 const Error404: React.FC<IError404> = ({ errorMessage }) => {
-  return (
-    <PageError
-      errorCode={404}
-      errorMessage={errorMessage}
-      pageDescription="404 Not Found"
-      pageTitle="404 Not Found"
-    />
-  );
+  return <PageError errorCode={404} errorMessage={errorMessage} />;
 };
 
 export default Error404;

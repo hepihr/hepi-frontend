@@ -1,6 +1,13 @@
 import React from "react";
 
-const EmployeeListRenderer: React.FC = (): JSX.Element => {
+interface IEmployeeListRenderer {
+  data: any;
+}
+
+const EmployeeListRenderer: React.FC<IEmployeeListRenderer> = ({
+  data,
+}): JSX.Element => {
+  console.log(data);
   return (
     <>
       <h1>Employee's List</h1>

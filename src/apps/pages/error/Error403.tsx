@@ -6,14 +6,7 @@ interface IError403 {
 }
 
 const Error403: React.FC<IError403> = ({ errorMessage }) => {
-  return (
-    <PageError
-      errorCode={403}
-      errorMessage={errorMessage}
-      pageDescription="403 Forbidden"
-      pageTitle="403 Forbidden"
-    />
-  );
+  return <PageError errorCode={403} errorMessage={errorMessage} />;
 };
 
 export default Error403;

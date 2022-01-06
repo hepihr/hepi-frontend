@@ -6,14 +6,7 @@ interface IError401 {
 }
 
 const Error401: React.FC<IError401> = ({ errorMessage }) => {
-  return (
-    <PageError
-      errorCode={401}
-      errorMessage={errorMessage}
-      pageDescription="401 Unauthorized"
-      pageTitle="401 Unauthorized"
-    />
-  );
+  return <PageError errorCode={401} errorMessage={errorMessage} />;
 };
 
 export default Error401;
