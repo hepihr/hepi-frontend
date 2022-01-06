@@ -1,9 +1,21 @@
-import React from "react";
+import React, { FormEventHandler } from "react";
 
-const FormWrapper = () => {
+interface IFormWrapper {
+  formSubmit: React.FormEvent<FormEventHandler>;
+  formLoading: boolean;
+  formIsError: boolean;
+  formError: any;
+}
+
+const FormWrapper: React.FC<IFormWrapper> = ({
+  formError,
+  formIsError,
+  formLoading,
+  formSubmit,
+}): JSX.Element => {
   return (
     <>
-      <div></div>
+      <h1>Halo</h1>
     </>
   );
 };
